@@ -3,5 +3,5 @@
 
 구현 예정 목록
 1. Multi-chatting (6.23 완료) 
-2. FTP
+2. FTP (6-25 완료)
    
