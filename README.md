@@ -38,7 +38,6 @@
 # 동작</br> 
 * Server는 Client의 요청만을 기다리고 그에 대응하는 응답을 해주기 때문에 Server에서는 Thread를 사용하지 않았습니다.</br></br>
 * Client는 주기적으로 Server에게 요청도하고 응답도 받아야하기 때문에 send, receive에 해당하는 Thread를 생성하였습니다.
-</br>
-
+</br></br>
 ># 구현 사진
 ![Alt text](image-9.png)
