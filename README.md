@@ -10,7 +10,7 @@
 * Thread를 통해 동시에 여러 Client가 접속할 수 있습니다.</br></br>
 * Server는 Send Thread 생성, Client는 개별의 Receive Thread를 통해 메세지 통신
 </br>
-** 옵션 **</br>
+**옵션**</br>
 **1. 전체전송** **2. 귓속말**
 
 * *  **1.전체전송**: 서버와 연결된 Client의 소켓 정보를 cnt[]배열에</br> 저장한 후 순차적으로 counting하여 배열에 저장하였습니다.</br> 그 후 cnt[]배열에 저장 된 전체 client들에게 broadcast</br>하는 방식으로 구현하였습니다.
