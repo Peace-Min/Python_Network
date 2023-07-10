@@ -6,10 +6,12 @@
 2. FTP (6-25 완료)
   --- 
 # 1. Multi-chatting
-> 소켓을 통한 Multi-Chatting입니다. Thread를 통해 동시에 여러 Client가 </br>접속할 수 있습니다. Server에는 Send를 전체적으로 다루고 있는 Thread </br>하나를 생성하였고, Client마다 Receive를 할 수 있는 개별의 Thread를 </br>통해서 메세지 전송과 수신을 동시에 할 수 있게 하였습니다.
-
-**옵션**
-</br>**1. 전체전송** **2. 귓속말**
+* Socket을 통한 Multi-Chatting입니다.</br></br>
+* Thread를 통해 동시에 여러 Client가 접속할 수 있습니다.</br></br>
+* Server는 Send Thread 생성, Client는 개별의 Receive Thread를 통해 메세지 통신
+</br>
+** 옵션 **</br>
+**1. 전체전송** **2. 귓속말**
 
 * *  **1.전체전송**: 서버와 연결된 Client의 소켓 정보를 cnt[]배열에</br> 저장한 후 순차적으로 counting하여 배열에 저장하였습니다.</br> 그 후 cnt[]배열에 저장 된 전체 client들에게 broadcast</br>하는 방식으로 구현하였습니다.
 
@@ -21,8 +23,8 @@
 ![Alt text](image-8.png)
 
 **후기**
-* 다른 Multi-Chatting 구현을 보면 Server에서 Client의 메세지를 받자마자</br> 연결 된 모든 Client한테 메세지를 브로드캐스트하는 예제를 많이 보았다.</br>       
-하지만 나는 Client한테 메세지를 Server에서 저장하고 필요한 메세지만 </br>브로드캐스트할 것인지 유니캐스트할 것인지 정하는 방식으로 구현하였다.
+* 다른 Multi-Chatting 구현은 Server에서 Client의 메세지를 받자마자</br> 연결 된 모든 Client한테 메세지를 **Broadcast**하는 예제를 많이 보았습니다.</br></br>      
+* 제가 구현한 방식은 Client한테 메세지를 Server에서 저장하고 필요한 메세지만 </br>**Broadcast**, **Unicast** 전송 방식을 정하는 방식으로 구현하였습니다.
 
 ---
 # 2. FTP
